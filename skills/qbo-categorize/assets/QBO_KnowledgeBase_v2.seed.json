@@ -1,0 +1,1709 @@
+{
+ "version": "v2",
+ "built": "2026-06-01",
+ "source_period": "2024-01-01..2026-06-01 (accrual)",
+ "entity_model": {
+  "L2M LLC": "management co",
+  "classes": [
+   "Cool Springs",
+   "Murfreesboro",
+   "W Nashville",
+   "ResaleAI",
+   "L2M Services"
+  ]
+ },
+ "category_precedence": [
+  "1 bank_account_category_override",
+  "2 exact vendor_rule",
+  "3 description_pattern (contains)",
+  "4 QBO default"
+ ],
+ "class_precedence": [
+  "1 account_class_rule (category=>L2M Services)",
+  "2 vendor_rule.class if fixed",
+  "3 bank_account_class (store/ResaleAI)"
+ ],
+ "bank_account_class": {
+  "1101 80100 Main CSprings": "Cool Springs",
+  "1111 80246 Main M'boro": "Murfreesboro",
+  "1116 80246 Buy M'boro": "Murfreesboro",
+  "1121 80414 Main WBridge": "W Nashville",
+  "1130 ResaleAI Main": "ResaleAI",
+  "1106 80100 Buy CSprings": "Cool Springs",
+  "1126 80414 Buy WBridge": "W Nashville"
+ },
+ "account_class_rules": {
+  "1509 Furniture & Fixtures": "L2M Services",
+  "6075 Accounting Fees": "L2M Services",
+  "6574 Guaranteed Payment-Glen": "L2M Services",
+  "6575 Guaranteed Payment-Jack": "L2M Services",
+  "6750.2 Auto Insurance": "L2M Services",
+  "7256 Rent - Office": "L2M Services",
+  "8400 Interest Expense": "L2M Services",
+  "6150 Automobile Expense": "L2M Services",
+  "6950 Legal & Professional Fees": "L2M Services"
+ },
+ "bank_account_category_overrides": [
+  {
+   "bank_account": "1111 80246 Main M'boro",
+   "vendor": "American Express",
+   "category": "1041 Credit Card Clearing-Murfreesboro"
+  },
+  {
+   "bank_account": "1116 80246 Buy M'boro",
+   "vendor": "U-Haul",
+   "category": "7255 Rent-Storage"
+  },
+  {
+   "bank_account": "1121 80414 Main WBridge",
+   "vendor": "American Express",
+   "category": "1042 Credit Card Clearing-W Nashville"
+  },
+  {
+   "bank_account": "1121 80414 Main WBridge",
+   "vendor": "Pinnacle National Bank",
+   "category": "6350 Credit Card Fees"
+  },
+  {
+   "bank_account": "1121 80414 Main WBridge",
+   "vendor": "Uber.com",
+   "category": "6505 Employee Meals"
+  },
+  {
+   "bank_account": "1130 ResaleAI Main",
+   "vendor": "UPS",
+   "category": "7450 Supplies"
+  },
+  {
+   "bank_account": "1130 ResaleAI Main",
+   "vendor": "WINMARK",
+   "category": "6100 Advertising & Promotion"
+  }
+ ],
+ "description_patterns": [
+  {
+   "label": "Greko",
+   "keywords": "greko",
+   "category": "6505 Employee Meals"
+  },
+  {
+   "label": "ProProfs",
+   "keywords": "proprofs",
+   "category": "7810 Computer/Tech Services"
+  },
+  {
+   "label": "Pinnacle Business Services",
+   "keywords": "pinnacle business",
+   "category": "6250 Bank Service Charges"
+  },
+  {
+   "label": "Everbowl",
+   "keywords": "everbowl",
+   "category": "6505 Employee Meals"
+  },
+  {
+   "label": "Mobile Deposit",
+   "keywords": "mobile deposit",
+   "category": "3030 Service/Fee Income"
+  },
+  {
+   "label": "Panera",
+   "keywords": "panera",
+   "category": "6505 Employee Meals"
+  },
+  {
+   "label": "Waffle House",
+   "keywords": "waffle house",
+   "category": "6505 Employee Meals"
+  },
+  {
+   "label": "Sonic",
+   "keywords": "sonic",
+   "category": "6505 Employee Meals"
+  },
+  {
+   "label": "Square Payment",
+   "keywords": "sq *",
+   "category": "6505 Employee Meals"
+  },
+  {
+   "label": "Toast Payment",
+   "keywords": "tst*",
+   "category": "6505 Employee Meals"
+  },
+  {
+   "label": "CVS",
+   "keywords": "cvs",
+   "category": "7450 Supplies"
+  },
+  {
+   "label": "Bank Service Charge",
+   "keywords": "service charge",
+   "category": "6250 Bank Service Charges"
+  }
+ ],
+ "vendor_rules": {
+  "amazon": {
+   "display": "AMAZON",
+   "category": "7450 Supplies",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 2616,
+   "recurring": true
+  },
+  "american express": {
+   "display": "American Express",
+   "category": "1040 Credit Card Clearing-Cool Springs",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 747,
+   "recurring": true
+  },
+  "adp": {
+   "display": "ADP",
+   "category": "7105 Payroll Service",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 423,
+   "recurring": true
+  },
+  "winmark": {
+   "display": "WINMARK",
+   "category": "7270 Royalties",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 366,
+   "recurring": true
+  },
+  "resaleai subscribers": {
+   "display": "ResaleAI Subscribers",
+   "category": "3030 Service/Fee Income",
+   "class": "ResaleAI",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 223,
+   "recurring": true
+  },
+  "secure payment systems": {
+   "display": "Secure Payment Systems",
+   "category": "6605 Gift Card Expense",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 228,
+   "recurring": true
+  },
+  "squarespace": {
+   "display": "SquareSpace",
+   "category": "7810 Computer/Tech Services",
+   "class": "ResaleAI",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 132,
+   "recurring": true
+  },
+  "pinnacle national bank": {
+   "display": "Pinnacle National Bank",
+   "category": "6250 Bank Service Charges",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 198,
+   "recurring": true
+  },
+  "jackson miller": {
+   "display": "Jackson Miller",
+   "category": "6575 Guaranteed Payment-Jack",
+   "class": "L2M Services",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 114,
+   "recurring": true
+  },
+  "glen miller": {
+   "display": "GLEN MILLER",
+   "category": "6574 Guaranteed Payment-Glen",
+   "class": "L2M Services",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 91,
+   "recurring": true
+  },
+  "tn dept of revenue": {
+   "display": "TN DEPT OF REVENUE",
+   "category": "2300 Sales Tax Payable",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 110,
+   "recurring": true
+  },
+  "atmos energy": {
+   "display": "Atmos energy",
+   "category": "7750 Utilities",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 102,
+   "recurring": true
+  },
+  "storplace": {
+   "display": "storplace",
+   "category": "7255 Rent-Storage",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 98,
+   "recurring": true
+  },
+  "comcast": {
+   "display": "COMCAST",
+   "category": "7750 Utilities",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 82,
+   "recurring": true
+  },
+  "mtemc": {
+   "display": "MTEMC",
+   "category": "7750 Utilities",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 78,
+   "recurring": true
+  },
+  "cook pest control": {
+   "display": "Cook Pest Control",
+   "category": "7300 Repairs and Maintenance",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 77,
+   "recurring": true
+  },
+  "adp payroll": {
+   "display": "ADP Payroll",
+   "category": "7105 Payroll Service",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 51,
+   "recurring": true
+  },
+  "designed environment": {
+   "display": "DESIGNED ENVIRONMENT",
+   "category": "7450 Supplies",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 51,
+   "recurring": true
+  },
+  "east nashville storage": {
+   "display": "East Nashville Storage",
+   "category": "7255 Rent-Storage",
+   "class": "L2M Services",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 51,
+   "recurring": true
+  },
+  "pinnacle service chg cc": {
+   "display": "Pinnacle SERVICE Chg CC",
+   "category": "6350 Credit Card Fees",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 52,
+   "recurring": true
+  },
+  "scg lion's head llc": {
+   "display": "SCG Lion's Head LLC",
+   "category": "7250 Rent Expense",
+   "class": "W Nashville",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 61,
+   "recurring": true
+  },
+  "wal-mart": {
+   "display": "Wal-Mart",
+   "category": "7450 Supplies",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 46,
+   "recurring": true
+  },
+  "internal revenue service": {
+   "display": "Internal Revenue Service",
+   "category": "6575 Guaranteed Payment-Jack",
+   "class": "L2M Services",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 30,
+   "recurring": true
+  },
+  "mac rich ac service": {
+   "display": "Mac Rich AC Service",
+   "category": "7300 Repairs and Maintenance",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 28,
+   "recurring": true
+  },
+  "github": {
+   "display": "Github",
+   "category": "7810 Computer/Tech Services",
+   "class": "ResaleAI",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 62,
+   "recurring": true
+  },
+  "poteat family lp": {
+   "display": "POTEAT FAMILY LP",
+   "category": "7250 Rent Expense",
+   "class": "Murfreesboro",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 29,
+   "recurring": true
+  },
+  "workable": {
+   "display": "Workable",
+   "category": "7810 Computer/Tech Services",
+   "class": "L2M Services",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 32,
+   "recurring": true
+  },
+  "verizon": {
+   "display": "Verizon",
+   "category": "7600 Telephone Expense",
+   "class": "L2M Services",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 27,
+   "recurring": true
+  },
+  "american express merchant svc": {
+   "display": "American Express Merchant SVC",
+   "category": "6350 Credit Card Fees",
+   "class": "Cool Springs",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 26,
+   "recurring": true
+  },
+  "chromatic": {
+   "display": "Chromatic",
+   "category": "7810 Computer/Tech Services",
+   "class": "ResaleAI",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 26,
+   "recurring": true
+  },
+  "dochub": {
+   "display": "DOCHUB",
+   "category": "7810 Computer/Tech Services",
+   "class": "ResaleAI",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 26,
+   "recurring": true
+  },
+  "dropbox": {
+   "display": "Dropbox",
+   "category": "7810 Computer/Tech Services",
+   "class": "L2M Services",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 28,
+   "recurring": true
+  },
+  "lincoln financial insurance": {
+   "display": "Lincoln Financial Insurance",
+   "category": "6750.1 Business Insurance",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 38,
+   "recurring": true
+  },
+  "linkedin": {
+   "display": "Linkedin",
+   "category": "6100 Advertising & Promotion",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 26,
+   "recurring": true
+  },
+  "mwsd - murf water": {
+   "display": "MWSD - Murf water",
+   "category": "7750 Utilities",
+   "class": "Murfreesboro",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 26,
+   "recurring": true
+  },
+  "twilio": {
+   "display": "Twilio",
+   "category": "4010 Cost of Goods Sold",
+   "class": "ResaleAI",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 26,
+   "recurring": true
+  },
+  "whimsical": {
+   "display": "Whimsical",
+   "category": "7810 Computer/Tech Services",
+   "class": "ResaleAI",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 26,
+   "recurring": true
+  },
+  "google fiber": {
+   "display": "Google Fiber",
+   "category": "7750 Utilities",
+   "class": "ResaleAI",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 25,
+   "recurring": true
+  },
+  "intuit": {
+   "display": "INTUIT",
+   "category": "7810 Computer/Tech Services",
+   "class": "L2M Services",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 25,
+   "recurring": true
+  },
+  "metro water": {
+   "display": "Metro Water",
+   "category": "7750 Utilities",
+   "class": "W Nashville",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 25,
+   "recurring": true
+  },
+  "piedmont gas": {
+   "display": "Piedmont Gas",
+   "category": "7750 Utilities",
+   "class": "W Nashville",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 25,
+   "recurring": true
+  },
+  "prog hawaii ins": {
+   "display": "Prog Hawaii INS",
+   "category": "6750.2 Auto Insurance",
+   "class": "L2M Services",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 24,
+   "recurring": true
+  },
+  "target": {
+   "display": "Target",
+   "category": "7450 Supplies",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 118,
+   "recurring": true
+  },
+  "fusion telecom": {
+   "display": "Fusion Telecom",
+   "category": "7750 Utilities",
+   "class": "Murfreesboro",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 21,
+   "recurring": true
+  },
+  "tk container": {
+   "display": "TK Container",
+   "category": "7255 Rent-Storage",
+   "class": "W Nashville",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 20,
+   "recurring": true
+  },
+  "uber.com": {
+   "display": "Uber.com",
+   "category": "7650 Travel",
+   "class": "ResaleAI",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 92,
+   "recurring": true
+  },
+  "lmr ii - shops at mallory llc": {
+   "display": "LMR II - Shops at Mallory LLC",
+   "category": "7250 Rent Expense",
+   "class": "Cool Springs",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 21,
+   "recurring": true
+  },
+  "paymantec": {
+   "display": "Paymantec",
+   "category": "6350 Credit Card Fees",
+   "class": "W Nashville",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 19,
+   "recurring": true
+  },
+  "when i work": {
+   "display": "When I Work",
+   "category": "7810 Computer/Tech Services",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 43,
+   "recurring": true
+  },
+  "checkr": {
+   "display": "Checkr",
+   "category": "7810 Computer/Tech Services",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 21,
+   "recurring": true
+  },
+  "m2 consulting": {
+   "display": "m2 consulting",
+   "category": "7120 Professional Services",
+   "class": "ResaleAI",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 18,
+   "recurring": true
+  },
+  "godaddy.com": {
+   "display": "GODADDY.COM",
+   "category": "7810 Computer/Tech Services",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 16,
+   "recurring": true
+  },
+  "messagebird": {
+   "display": "MESSAGEBIRD",
+   "category": "7810 Computer/Tech Services",
+   "class": "ResaleAI",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 22,
+   "recurring": true
+  },
+  "microsoft azure": {
+   "display": "MICROSOFT Azure",
+   "category": "4010 Cost of Goods Sold",
+   "class": "ResaleAI",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 41,
+   "recurring": true
+  },
+  "ups": {
+   "display": "UPS",
+   "category": "7200 Postage & Delivery",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 22,
+   "recurring": true
+  },
+  "primo water": {
+   "display": "Primo Water",
+   "category": "7450 Supplies",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 43,
+   "recurring": true
+  },
+  "center 615": {
+   "display": "Center 615",
+   "category": "7256 Rent - Office",
+   "class": "L2M Services",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 12,
+   "recurring": true
+  },
+  "cilantro": {
+   "display": "Cilantro",
+   "category": "6505 Employee Meals",
+   "class": "ResaleAI",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 15,
+   "recurring": true
+  },
+  "ringcentral": {
+   "display": "RingCentral",
+   "category": "7350 Security System",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "bank-account default",
+   "hist_txns": 11
+  },
+  "u-haul": {
+   "display": "U-Haul",
+   "category": "7010 Moving Expense",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 16,
+   "recurring": true
+  },
+  "bandwidth": {
+   "display": "Bandwidth",
+   "category": "4010 Cost of Goods Sold",
+   "class": "ResaleAI",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 10,
+   "recurring": true
+  },
+  "aldi": {
+   "display": "Aldi",
+   "category": "7450 Supplies",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 10,
+   "recurring": true
+  },
+  "lulu": {
+   "display": "Lulu",
+   "category": "7450 Supplies",
+   "class": "L2M Services",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 8,
+   "recurring": true
+  },
+  "kroger": {
+   "display": "Kroger",
+   "category": "7450 Supplies",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 42,
+   "recurring": true
+  },
+  "dollar tree": {
+   "display": "Dollar Tree",
+   "category": "7450 Supplies",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 8,
+   "recurring": true
+  },
+  "constant contact": {
+   "display": "Constant Contact",
+   "category": "6100 Advertising & Promotion",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 65,
+   "recurring": true
+  },
+  "usps": {
+   "display": "USPS",
+   "category": "7200 Postage & Delivery",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 7,
+   "recurring": true
+  },
+  "fivestars": {
+   "display": "FIVESTARS",
+   "category": "6100 Advertising & Promotion",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 115,
+   "recurring": true
+  },
+  "starbucks": {
+   "display": "STARBUCKS",
+   "category": "6505 Employee Meals",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 9,
+   "recurring": true
+  },
+  "temu.com": {
+   "display": "Temu.com",
+   "category": "1300.1 New Inventory-Cool Springs",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 323,
+   "recurring": true
+  },
+  "evernote": {
+   "display": "EverNOTE",
+   "category": "7810 Computer/Tech Services",
+   "class": "L2M Services",
+   "cat_confidence": "HIGH",
+   "class_basis": "vendor-default L2M",
+   "hist_txns": 4
+  },
+  "five below": {
+   "display": "FIVE Below",
+   "category": "7450 Supplies",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 9,
+   "recurring": true
+  },
+  "google": {
+   "display": "Google",
+   "category": "7810 Computer/Tech Services",
+   "class": "ResaleAI",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 27,
+   "recurring": true
+  },
+  "homegoods": {
+   "display": "HOMEGOODS",
+   "category": "7450 Supplies",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "bank-account default",
+   "hist_txns": 3
+  },
+  "loews orlando hotel": {
+   "display": "LOEWS ORLANDO HOTEL",
+   "category": "7650 Travel",
+   "class": "L2M Services",
+   "cat_confidence": "HIGH",
+   "class_basis": "vendor-default L2M",
+   "hist_txns": 8
+  },
+  "microsoft": {
+   "display": "MICROSOFT",
+   "category": "7810 Computer/Tech Services",
+   "class": "ResaleAI",
+   "cat_confidence": "HIGH",
+   "class_basis": "history",
+   "hist_txns": 5
+  },
+  "racetrac": {
+   "display": "RaceTrac",
+   "category": "6505 Employee Meals",
+   "class": "By bank account (store)",
+   "cat_confidence": "MEDIUM",
+   "class_basis": "bank-account default",
+   "hist_txns": 4
+  },
+  "best buy": {
+   "display": "BEST BUY",
+   "category": "7450 Supplies",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "bank-account default",
+   "hist_txns": 2
+  },
+  "blackman high school": {
+   "display": "Blackman High School",
+   "category": "6100 Advertising & Promotion",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "bank-account default",
+   "hist_txns": 2
+  },
+  "costco": {
+   "display": "COSTCO",
+   "category": "7450 Supplies",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "bank-account default",
+   "hist_txns": 3
+  },
+  "doordash": {
+   "display": "DoorDash",
+   "category": "6505 Employee Meals",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 9,
+   "recurring": true
+  },
+  "home depot": {
+   "display": "HOME DEPOT",
+   "category": "7450 Supplies",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 6,
+   "recurring": true
+  },
+  "lastpass": {
+   "display": "LASTPASS",
+   "category": "7810 Computer/Tech Services",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "bank-account default",
+   "hist_txns": 2
+  },
+  "mtsu student directory": {
+   "display": "MTSU STUDENT DIRECTORY",
+   "category": "6100 Advertising & Promotion",
+   "class": "By bank account (store)",
+   "cat_confidence": "LOW",
+   "class_basis": "bank-account default",
+   "hist_txns": 2
+  },
+  "metropolitan trustee": {
+   "display": "Metropolitan Trustee",
+   "category": "7562 Taxes-Property Tax",
+   "class": "By bank account (store)",
+   "cat_confidence": "LOW",
+   "class_basis": "bank-account default",
+   "hist_txns": 4
+  },
+  "southwest airlines": {
+   "display": "SOUTHWEST AIRLINES",
+   "category": "7650 Travel",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 63,
+   "recurring": true
+  },
+  "uline": {
+   "display": "ULINE",
+   "category": "7450 Supplies",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "bank-account default",
+   "hist_txns": 4
+  },
+  "velvet taco": {
+   "display": "Velvet Taco",
+   "category": "6505 Employee Meals",
+   "class": "ResaleAI",
+   "cat_confidence": "HIGH",
+   "class_basis": "history",
+   "hist_txns": 6
+  },
+  "chick-fil-a": {
+   "display": "chick-fil-a",
+   "category": "6505 Employee Meals",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "bank-account default",
+   "hist_txns": 4
+  },
+  "4h": {
+   "display": "4H",
+   "category": "7650 Travel",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 19,
+   "recurring": true
+  },
+  "chipotle": {
+   "display": "Chipotle",
+   "category": "6505 Employee Meals",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 7,
+   "recurring": true
+  },
+  "city of murfreesboro": {
+   "display": "City of Murfreesboro",
+   "category": "7562 Taxes-Property Tax",
+   "class": "Murfreesboro",
+   "cat_confidence": "HIGH",
+   "class_basis": "history single-store",
+   "hist_txns": 3
+  },
+  "domino's pizza": {
+   "display": "Domino's Pizza",
+   "category": "6505 Employee Meals",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "bank-account default",
+   "hist_txns": 4
+  },
+  "federal express": {
+   "display": "Federal Express",
+   "category": "7450 Supplies",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "bank-account default",
+   "hist_txns": 2
+  },
+  "frankenmuth": {
+   "display": "Frankenmuth",
+   "category": "6750.1 Business Insurance",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 95,
+   "recurring": true
+  },
+  "instacart": {
+   "display": "Instacart",
+   "category": "7450 Supplies",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "bank-account default",
+   "hist_txns": 5
+  },
+  "jimmy johns": {
+   "display": "JIMMY JOHNS",
+   "category": "6505 Employee Meals",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "bank-account default",
+   "hist_txns": 1
+  },
+  "lawson high school baseball booster club": {
+   "display": "Lawson High School Baseball Booster Club",
+   "category": "6100 Advertising & Promotion",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "bank-account default",
+   "hist_txns": 1
+  },
+  "mnaa": {
+   "display": "MNAA",
+   "category": "7650 Travel",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 14,
+   "recurring": true
+  },
+  "mcdonald's": {
+   "display": "McDonald's",
+   "category": "6505 Employee Meals",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "bank-account default",
+   "hist_txns": 5
+  },
+  "papa john's": {
+   "display": "Papa John's",
+   "category": "6505 Employee Meals",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "bank-account default",
+   "hist_txns": 5
+  },
+  "state of tennessee": {
+   "display": "State of Tennessee",
+   "category": "1101 80100 Main CSprings",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "bank-account default",
+   "hist_txns": 1
+  },
+  "sticker mule": {
+   "display": "Sticker Mule",
+   "category": "7450 Supplies",
+   "class": "ResaleAI",
+   "cat_confidence": "HIGH",
+   "class_basis": "history",
+   "hist_txns": 3
+  },
+  "webstaurant": {
+   "display": "Webstaurant",
+   "category": "7450 Supplies",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "bank-account default",
+   "hist_txns": 4
+  },
+  "wendy's": {
+   "display": "Wendy's",
+   "category": "6505 Employee Meals",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "bank-account default",
+   "hist_txns": 3
+  },
+  "snapchat": {
+   "display": "Snapchat",
+   "category": "6100 Advertising & Promotion",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 2466,
+   "recurring": true
+  },
+  "google adwords": {
+   "display": "Google Adwords",
+   "category": "6100 Advertising & Promotion",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 651,
+   "recurring": true
+  },
+  "facebook": {
+   "display": "FACEBOOK",
+   "category": "6100 Advertising & Promotion",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 567,
+   "recurring": true
+  },
+  "the hartford": {
+   "display": "THE Hartford",
+   "category": "6750.1 Business Insurance",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 464,
+   "recurring": true
+  },
+  "tiktok": {
+   "display": "TIKTOK",
+   "category": "6100 Advertising & Promotion",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 201,
+   "recurring": true
+  },
+  "apple": {
+   "display": "Apple",
+   "category": "7450 Supplies",
+   "class": "ResaleAI",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 133,
+   "recurring": true
+  },
+  "cash": {
+   "display": "CASH",
+   "category": "6925 Janitorial Expense",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 109,
+   "recurring": true
+  },
+  "staples": {
+   "display": "STAPLES",
+   "category": "7225 Printing & Reproduction",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 147,
+   "recurring": true
+  },
+  "tesla": {
+   "display": "Tesla",
+   "category": "6150 Automobile Expense",
+   "class": "L2M Services",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 74,
+   "recurring": true
+  },
+  "rockbot": {
+   "display": "Rockbot",
+   "category": "6303 Satellite Radio",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 80,
+   "recurring": true
+  },
+  "mailchimp": {
+   "display": "MailChimp",
+   "category": "6100 Advertising & Promotion",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 81,
+   "recurring": true
+  },
+  "freshworks inc": {
+   "display": "FRESHWORKS INC",
+   "category": "7810.1 Customer Support",
+   "class": "ResaleAI",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 52,
+   "recurring": true
+  },
+  "chatgpt": {
+   "display": "ChatGPT",
+   "category": "7810 Computer/Tech Services",
+   "class": "ResaleAI",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 52,
+   "recurring": true
+  },
+  "at&t": {
+   "display": "AT&T",
+   "category": "7810 Computer/Tech Services",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 78,
+   "recurring": true
+  },
+  "zapier": {
+   "display": "Zapier",
+   "category": "7810 Computer/Tech Services",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 78,
+   "recurring": true
+  },
+  "schedugram": {
+   "display": "Schedugram",
+   "category": "7810 Computer/Tech Services",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 60,
+   "recurring": true
+  },
+  "brand advantage": {
+   "display": "Brand Advantage",
+   "category": "7450 Supplies",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 54,
+   "recurring": true
+  },
+  "slack": {
+   "display": "Slack",
+   "category": "7810 Computer/Tech Services",
+   "class": "ResaleAI",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 34,
+   "recurring": true
+  },
+  "amazon aws": {
+   "display": "Amazon AWS",
+   "category": "4010 Cost of Goods Sold",
+   "class": "ResaleAI",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 26,
+   "recurring": true
+  },
+  "linode": {
+   "display": "LINODE",
+   "category": "7810 Computer/Tech Services",
+   "class": "ResaleAI",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 26,
+   "recurring": true
+  },
+  "1password": {
+   "display": "1password",
+   "category": "7810 Computer/Tech Services",
+   "class": "ResaleAI",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 26,
+   "recurring": true
+  },
+  "adobe": {
+   "display": "Adobe",
+   "category": "7810 Computer/Tech Services",
+   "class": "ResaleAI",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 26,
+   "recurring": true
+  },
+  "new relic": {
+   "display": "New Relic",
+   "category": "7810 Computer/Tech Services",
+   "class": "ResaleAI",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 25,
+   "recurring": true
+  },
+  "anthropic claude team": {
+   "display": "ANTHROPIC CLAUDE TEAM",
+   "category": "7810 Computer/Tech Services",
+   "class": "ResaleAI",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 24,
+   "recurring": true
+  },
+  "spotify": {
+   "display": "Spotify",
+   "category": "6100 Advertising & Promotion",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 36,
+   "recurring": true
+  },
+  "heroku": {
+   "display": "Heroku",
+   "category": "4010 Cost of Goods Sold",
+   "class": "ResaleAI",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 23,
+   "recurring": true
+  },
+  "instatus": {
+   "display": "Instatus",
+   "category": "7810 Computer/Tech Services",
+   "class": "ResaleAI",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 22,
+   "recurring": true
+  },
+  "faire": {
+   "display": "Faire",
+   "category": "1300.1 New Inventory-Cool Springs",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 30,
+   "recurring": true
+  },
+  "shein": {
+   "display": "Shein",
+   "category": "1300.1 New Inventory-Cool Springs",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 27,
+   "recurring": true
+  },
+  "youtube": {
+   "display": "youtube",
+   "category": "7810 Computer/Tech Services",
+   "class": "L2M Services",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 18,
+   "recurring": true
+  },
+  "photoroom": {
+   "display": "photoroom",
+   "category": "7810 Computer/Tech Services",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 21,
+   "recurring": true
+  },
+  "papertrail": {
+   "display": "Papertrail",
+   "category": "7810 Computer/Tech Services",
+   "class": "ResaleAI",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 11,
+   "recurring": true
+  },
+  "southwest": {
+   "display": "Southwest",
+   "category": "7650 Travel",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 8,
+   "recurring": true
+  },
+  "herts rent-a-car": {
+   "display": "Herts Rent-a-car",
+   "category": "7650 Travel",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 6,
+   "recurring": true
+  },
+  "hampton inn": {
+   "display": "Hampton Inn",
+   "category": "7650 Travel",
+   "class": "L2M Services",
+   "cat_confidence": "HIGH",
+   "class_basis": "history",
+   "hist_txns": 6
+  },
+  "lowe's": {
+   "display": "Lowe's",
+   "category": "7450 Supplies",
+   "class": "W Nashville",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 6,
+   "recurring": true
+  },
+  "shell oil": {
+   "display": "Shell Oil",
+   "category": "7650 Travel",
+   "class": "L2M Services",
+   "cat_confidence": "HIGH",
+   "class_basis": "history",
+   "hist_txns": 5
+  },
+  "walgreen's": {
+   "display": "WALGREEN'S",
+   "category": "7450 Supplies",
+   "class": "Cool Springs",
+   "cat_confidence": "HIGH",
+   "class_basis": "history single-store",
+   "hist_txns": 5
+  },
+  "p m": {
+   "display": "P M",
+   "category": "7650 Travel",
+   "class": "L2M Services",
+   "cat_confidence": "HIGH",
+   "class_basis": "vendor-default L2M",
+   "hist_txns": 5
+  },
+  "space inch": {
+   "display": "Space Inch",
+   "category": "7120 Professional Services",
+   "class": "ResaleAI",
+   "cat_confidence": "MED",
+   "class_basis": "history",
+   "hist_txns": 4
+  },
+  "youcanbookme": {
+   "display": "youcanbookme",
+   "category": "7810 Computer/Tech Services",
+   "class": "ResaleAI",
+   "cat_confidence": "MED",
+   "class_basis": "history",
+   "hist_txns": 4
+  },
+  "minute key": {
+   "display": "Minute Key",
+   "category": "7450 Supplies",
+   "class": "W Nashville",
+   "cat_confidence": "MED",
+   "class_basis": "history single-store",
+   "hist_txns": 4
+  },
+  "metro": {
+   "display": "Metro",
+   "category": "7650 Travel",
+   "class": "L2M Services",
+   "cat_confidence": "MED",
+   "class_basis": "vendor-default L2M",
+   "hist_txns": 4
+  },
+  "publix": {
+   "display": "PUBLIX",
+   "category": "7450 Supplies",
+   "class": "Cool Springs",
+   "cat_confidence": "MED",
+   "class_basis": "history single-store",
+   "hist_txns": 4
+  },
+  "dialpad meeting": {
+   "display": "Dialpad Meeting",
+   "category": "7600 Telephone Expense",
+   "class": "By bank account (store)",
+   "cat_confidence": "MED",
+   "class_basis": "bank-account default",
+   "hist_txns": 6
+  },
+  "flycode.com": {
+   "display": "flycode.com",
+   "category": "7810 Computer/Tech Services",
+   "class": "ResaleAI",
+   "cat_confidence": "MED",
+   "class_basis": "history",
+   "hist_txns": 3
+  },
+  "joyland": {
+   "display": "Joyland",
+   "category": "6505 Employee Meals",
+   "class": "ResaleAI",
+   "cat_confidence": "MED",
+   "class_basis": "history",
+   "hist_txns": 3
+  },
+  "canva.com": {
+   "display": "canva.com",
+   "category": "7810 Computer/Tech Services",
+   "class": "ResaleAI",
+   "cat_confidence": "MED",
+   "class_basis": "history",
+   "hist_txns": 3
+  },
+  "office depot": {
+   "display": "OFFICE DEPOT",
+   "category": "7450 Supplies",
+   "class": "Cool Springs",
+   "cat_confidence": "MED",
+   "class_basis": "history single-store",
+   "hist_txns": 3
+  },
+  "delta airlines": {
+   "display": "DELTA AIRLINES",
+   "category": "7650 Travel",
+   "class": "By bank account (store)",
+   "cat_confidence": "LOW",
+   "class_basis": "bank-account default",
+   "hist_txns": 2
+  },
+  "contribsys": {
+   "display": "contribsys",
+   "category": "7810 Computer/Tech Services",
+   "class": "By bank account (store)",
+   "cat_confidence": "LOW",
+   "class_basis": "bank-account default",
+   "hist_txns": 2
+  },
+  "graphql": {
+   "display": "Graphql",
+   "category": "7810 Computer/Tech Services",
+   "class": "By bank account (store)",
+   "cat_confidence": "LOW",
+   "class_basis": "bank-account default",
+   "hist_txns": 2
+  },
+  "docker": {
+   "display": "Docker",
+   "category": "4010 Cost of Goods Sold",
+   "class": "By bank account (store)",
+   "cat_confidence": "LOW",
+   "class_basis": "bank-account default",
+   "hist_txns": 2
+  },
+  "hyatt": {
+   "display": "HYATT",
+   "category": "7650 Travel",
+   "class": "By bank account (store)",
+   "cat_confidence": "LOW",
+   "class_basis": "bank-account default",
+   "hist_txns": 2
+  },
+  "ubiquiti": {
+   "display": "Ubiquiti",
+   "category": "7810 Computer/Tech Services",
+   "class": "By bank account (store)",
+   "cat_confidence": "LOW",
+   "class_basis": "bank-account default",
+   "hist_txns": 2
+  },
+  "access lock and key": {
+   "display": "Access lock and key",
+   "category": "7300 Repairs and Maintenance",
+   "class": "By bank account (store)",
+   "cat_confidence": "LOW",
+   "class_basis": "bank-account default",
+   "hist_txns": 2
+  },
+  "logmein": {
+   "display": "LogMeIN",
+   "category": "7810 Computer/Tech Services",
+   "class": "By bank account (store)",
+   "cat_confidence": "LOW",
+   "class_basis": "bank-account default",
+   "hist_txns": 3
+  },
+  "polypane": {
+   "display": "Polypane",
+   "category": "7810 Computer/Tech Services",
+   "class": "By bank account (store)",
+   "cat_confidence": "LOW",
+   "class_basis": "bank-account default",
+   "hist_txns": 2
+  },
+  "easydns": {
+   "display": "EASYDNS",
+   "category": "7810 Computer/Tech Services",
+   "class": "By bank account (store)",
+   "cat_confidence": "LOW",
+   "class_basis": "bank-account default",
+   "hist_txns": 2
+  },
+  "ring": {
+   "display": "Ring",
+   "category": "7350 Security System",
+   "class": "By bank account (store)",
+   "cat_confidence": "LOW",
+   "class_basis": "bank-account default",
+   "hist_txns": 3
+  },
+  "trader joe's": {
+   "display": "Trader Joe's",
+   "category": "6505 Employee Meals",
+   "class": "By bank account (store)",
+   "cat_confidence": "LOW",
+   "class_basis": "bank-account default",
+   "hist_txns": 2
+  },
+  "kum & go": {
+   "display": "Kum & Go",
+   "category": "6505 Employee Meals",
+   "class": "By bank account (store)",
+   "cat_confidence": "LOW",
+   "class_basis": "bank-account default",
+   "hist_txns": 2
+  },
+  "newslink": {
+   "display": "Newslink",
+   "category": "7650 Travel",
+   "class": "By bank account (store)",
+   "cat_confidence": "LOW",
+   "class_basis": "bank-account default",
+   "hist_txns": 2
+  },
+  "nes": {
+   "display": "NES",
+   "category": "7750 Utilities",
+   "class": "W Nashville",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 0,
+   "recurring": true
+  },
+  "customer used inventory": {
+   "display": "Customer Used Inventory",
+   "category": "1300.2 Used Inventory-Cool Springs",
+   "class": "By bank account (store)",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 0,
+   "recurring": true
+  },
+  "pusher": {
+   "display": "Pusher",
+   "category": "7810 Computer/Tech Services",
+   "class": "ResaleAI",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 0,
+   "recurring": true
+  },
+  "termly": {
+   "display": "termly",
+   "category": "7810 Computer/Tech Services",
+   "class": "ResaleAI",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 0,
+   "recurring": true
+  },
+  "codacy": {
+   "display": "Codacy",
+   "category": "7810 Computer/Tech Services",
+   "class": "ResaleAI",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 0,
+   "recurring": true
+  },
+  "riverside village": {
+   "display": "Riverside Village",
+   "category": "7450 Supplies",
+   "class": "ResaleAI",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 0,
+   "recurring": true
+  },
+  "google domain": {
+   "display": "Google Domain",
+   "category": "7810 Computer/Tech Services",
+   "class": "ResaleAI",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 0,
+   "recurring": true
+  },
+  "monday.com": {
+   "display": "MONDAY.COM",
+   "category": "7810 Computer/Tech Services",
+   "class": "ResaleAI",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 0,
+   "recurring": true
+  },
+  "parosouth": {
+   "display": "ParoSouth",
+   "category": "7256 Rent - Office",
+   "class": "L2M Services",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 0,
+   "recurring": true
+  },
+  "box": {
+   "display": "box",
+   "category": "7810 Computer/Tech Services",
+   "class": "L2M Services",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 0,
+   "recurring": true
+  },
+  "uhy was patterson, hardee & ballentine, p.c.": {
+   "display": "UHY was Patterson, Hardee & Ballentine, P.C.",
+   "category": "6075 Accounting Fees",
+   "class": "L2M Services",
+   "cat_confidence": "HIGH",
+   "class_basis": "recurring rule (verified)",
+   "hist_txns": 0,
+   "recurring": true
+  }
+ },
+ "skip_patterns": [
+  "olb transfer",
+  "cashed check",
+  "direct deposit"
+ ],
+ "skip_note": "Rows whose description matches these are inter-account transfers / payroll funding that QuickBooks' own bank Rules post at 100%. The skill skips them (neither categorized nor review) so the vendor KB stays clean."
+}

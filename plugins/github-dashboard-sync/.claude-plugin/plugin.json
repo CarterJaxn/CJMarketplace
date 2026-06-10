@@ -1,0 +1,9 @@
+{
+  "name": "github-dashboard-sync",
+  "version": "0.1.0",
+  "description": "Sync GitHub PR and issue activity to your project dashboard automatically. Matches PRs by title and label to tracked projects, surfaces progress with confirmation prompts.",
+  "author": {
+    "name": "Carter Miller"
+  },
+  "keywords": ["github", "dashboard", "projects", "PRs", "sync"]
+}
